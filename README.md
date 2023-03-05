@@ -16,7 +16,7 @@ RecycledViewPool 适合怎样的使用场景呢？这是这篇文章，我们需
 
 ### 书写测试代码
 
-#### 构建供测试的代码框架(commitId: 046541a4)
+#### 构建供测试的代码框架(commitId: [046541a4](https://github.com/sunnyswag/RecycledViewPoolDemo/commit/046541a44e52ed62ed843d602f686a3863c19b1c))
 
 我们将会构建一个  Viewpager -> Fragment -> Recyclerview 的 UI 结构。在当前情况下，每个 Recyclerview 都会使用各自的 RecycledViewPool，并且各自的 RecycledViewPool 互不干扰。简要的代码逻辑如下：
 
@@ -112,7 +112,7 @@ class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(
 
 
 
-#### 引入 RecycledViewPool (commitId: d1c822ba)
+#### 引入 RecycledViewPool (commitId: [d1c822ba](https://github.com/sunnyswag/RecycledViewPoolDemo/commit/d1c822bacccfbe24062ddf2f329447785d8d1532))
 
 **RecyclerViewItemViewModel：**
 
@@ -163,11 +163,11 @@ class ViewPagerItemFragment: Fragment() {
 
 
 
-#### recycledViewPool + 多个 viewType (commitId: 80776521)
+#### recycledViewPool + 多个 viewType (commitId: [80776521](https://github.com/sunnyswag/RecycledViewPoolDemo/commit/80776521f96bf17188c260fd34e63bf1d1813e28))
 
 **RecyclerViewAdapter：**
 
-我们修改 RecyclerViewAdapter 让其支持多个 viewType。具体的逻辑为：第 0~19 个 item 使用的是 BlueViewHolder，第 20~39 个 item 使用的是 PurpleViewHolder。
+我们修改 RecyclerViewAdapter 让其支持多个 viewType。具体的逻辑为：第 0 ~ 19 个 item 使用的是 BlueViewHolder，第 20 ~ 39 个 item 使用的是 PurpleViewHolder。
 
 ```kotlin
 class RecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
